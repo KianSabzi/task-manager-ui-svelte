@@ -1,6 +1,6 @@
 <script>
     import { Button, Modal ,Label, Input,Datepicker,Checkbox , Textarea ,Fileupload,Helper, Dropzone} from 'flowbite-svelte';
-    export let formModal
+    export let formModal = false;
     export let title;
     export let dueDate;
 </script>
@@ -10,30 +10,29 @@
 </style>
 
 
-<Button on:click={() => (formModal = true)}>{title}</Button>
+<Button on:click={() => (formModal = true)}>عنوان تسک</Button>
 
-<Modal bind:open={formModal} size="xs" autoclose={true} class="w-full">
+<Modal bind:open={formModal} size="md" autoclose={true} class="w-full">
   <form class="flex flex-col space-y-6" action="#">
     <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">جزییات تسک</h3>
+    
     <Label class="space-y-2">
-      <span class="float-right">عنوان تسک</span>
-      <Input class="" type="text" name="title" placeholder="عنوان جدید را وارد کنید" required />
+        <span class="float-right">عنوان تسک</span>        
     </Label>
-    <div class="flex items-stretch">
-        <div>
-            <Label class="space-y-2">
+    <Input class="" type="text" name="title" placeholder="عنوان جدید را وارد کنید" required />
+    <div class="content-center">
+        <div class="float-right">
+            <Label class="flex flex-col space-y-2">
                 <span class="">تاریخ سر رسید</span>
                 <!-- <Datepicker name="dueDate" placeholder="تاریخ سررسید" class="space-y-2"></Datepicker> -->
             </Label>
-        </div>
-       
-        <div>
-            <Label class="space-y-2">
-                <span class="">زمان یادآوری</span>
+        </div>       
+        <div class="">
+            <Label class="flex flex-col space-y-2">  
+                <span class="">زمان یادآوری</span>              
                 <!-- <Datepicker name="reminderDate" placeholder="تاریخ سررسید" class="space-y-2"></Datepicker> -->
              </Label>
         </div>
-       
     </div>
     <Label class="space-y-2">
         <Dropzone class="h-20">
