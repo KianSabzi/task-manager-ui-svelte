@@ -1,5 +1,8 @@
 <script>
-   import TaskList from "./UserTasks/TaskList.svelte";
+// @ts-nocheck
+
+import TaskDetails from "./UserTasks/TaskDetails.svelte";
+import TaskList from "./UserTasks/TaskList.svelte";
 
   
 let isFav = null;
@@ -10,7 +13,7 @@ let tasks = [
           dueDate : "1401/10/21",
           progress : "75%",
           isFav: !isFav
-
+          
       },
       {
           id : "02",
@@ -18,6 +21,7 @@ let tasks = [
           dueDate : "1401/10/24",
           progress : "45%",
           isFav: !isFav
+          
       },
       {
           id : "03",
@@ -25,6 +29,7 @@ let tasks = [
           dueDate : "1401/10/22",
           progress : "90%",
           isFav: !isFav
+          
       },
       {
           id : "04",
@@ -32,6 +37,7 @@ let tasks = [
           dueDate : "1401/12/10",
           progress : "30%",
           isFav: !isFav
+          
       }
       
   ]
@@ -39,7 +45,9 @@ let tasks = [
 </script>
 
 <main>
-  
+    <TaskList {tasks}/>
+   
+
 </main>
 
 <style>
@@ -47,4 +55,3 @@ let tasks = [
 </style>
 
 
-<TaskList {tasks}/>
