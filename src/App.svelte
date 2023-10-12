@@ -1,7 +1,4 @@
 <script>
-// @ts-nocheck
-
-import TaskDetails from "./UserTasks/TaskDetails.svelte";
 import TaskList from "./UserTasks/TaskList.svelte";
 
   
@@ -46,7 +43,6 @@ let tasks = [
 
 <main>
     <TaskList {tasks}/>
-   
 
 </main>
 
