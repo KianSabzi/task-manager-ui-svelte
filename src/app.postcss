@@ -1,9 +1,18 @@
 /* Write your global styles here, in PostCSS syntax */
 
+@font-face {
+  font-family: "IranYekanWeb";
+  src: url('assets/fonts/iranyekanwebregular.eot');
+  src: url('assets/fonts/iranyekanwebregular.eot') format('embedded-opentype'),
+       url('assets/fonts/fira/iranyekanwebregular.woff') format('woff'),
+       url('fonts/fira/woff2/iranyekanwebregular.ttf') format('truetype');
+}
+
+
 @tailwind base;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: IranYekanWeb, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
