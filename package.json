@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@majidh1/jalalidatepicker": "^0.9.3",
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "autoprefixer": "^10.4.14",
     "flowbite": "^1.8.1",
